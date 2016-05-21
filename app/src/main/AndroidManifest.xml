@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.chayut.santaslittlehelper">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC7EXhyRs1eGL4SFhpFPN0uy6Mm7MBNx3I" />
+
+        <!-- for A8:D6:4F:C3:67:90:B2:40:D2:4B:45:40:7C:3B:50:0E:D4:00:04:10;me.chayut.santaslittlehelper -->
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="me.zhenning.SantaAccountService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+
+        <service
+            android:name=".SantaService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- Declaring broadcast receiver for BOOT_COMPLETED event. -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".ManageEndpointActivity" />
+        <activity android:name=".TaskListActivity" />
+        <activity android:name=".SetupTaskLocationActivity" />
+        <activity android:name=".SetupTaskAlarmActivity" />
+        <activity android:name=".SetupTaskBatteryActivity" />
+        <activity android:name=".SelectActionActivity" />
+        <activity android:name=".ManageLocationActivity" />
+        <activity android:name=".SetupLocationActivity" />
+        <activity android:name=".AlarmActivity" />
+        <activity android:name="me.zhenning.AccountSelectActivity" />
+        <activity android:name="me.zhenning.AuthenticatorActivity" />
+        <activity android:name="me.zhenning.AccountInfoTestActivity" />
+        <activity android:name=".DebugActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+
+
+\usepackage[english]{fancyref}
+\usepackage{fullpage}
+%\usepackage[top=1in, bottom = 1in, left = 1in, rigth = 1in]{geometry}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+\bibliographystyle{ieeetr}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\usepackage{tocbibind}
+\usepackage{setspace}
+
+
+\author{Zhenning Jiang (z5082223)}
+\date{\today}
+%-------Macros--------------------
+\newcommand{\CCM}{continuous conduction mode}
+
+
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\Huge{
+				ELEC9782 Mobile Applications and Network Performance\\
+			}
+			\Huge{
+				Project Proposal\\
+				[1cm]
+				Application: Santa's Little Helper\\
+			}
+			\\
+			[2cm]\\
+			
+			\includegraphics[width = 0.4\textwidth]{UNSW_coat_of_arms.png}\\
+			[1.5cm]
+			\Large{Group Member: \\
+				Chayut Orapinpatipat\\
+				Ken Cheung \\
+				Jingming Yang\\
+				Jinhui Li\\
+				Bowen Gu\\
+				Zhenning Jiang (z5082223)\\
+				[0.7cm]
+				\today\\
+				[0.7cm]
+			}		
+		\end{center}
+	\end{titlepage}
+    \newpage
+	
+	\section{Summary}
+	Santa's little helper is aiming at becoming the life assistant of the users. It provides location or event based notification services. The application can store users' predefined outgoing emails and SMS and send out the messages at appropriate moment automatically. For example, the user miss the wake up alarm. The application would send email to notify others of potential delay of the meeting.
+	
+	Also, the application would keep track of the user location and perform location based services. For instance, the application can turn on WiFi for the user automatically when it finds that the user is at home to help the user avoid high cost of data streaming using Cellular network. On the contrary, it can turn off the WiFi to conserve energy for the user when it finds that the user is away from home. 
+	
+	
+	\section{Features}
+	\subsection{User interfaces}
+	
+	In this application, we would have several graphical user interfaces to interact with the user. We would have one interface to let user type in their email content, subject and receiver. We would have interface to let user select the key location in order to perform location based services. Also, we should develop GUI for configuration of the application itself.
+	
+	\subsection{Data communication}
+	
+	Since we want our application to be able to send email, we have to do the data communication either using Cellular network or WiFi. Also, using WiFi would help us getting more accurate location information.
+	
+	\subsection{Energy optimization}
+	
+	Since we want to acquire location information, energy optimization is a big issue for our application. Using the build-in cellphone GPS for acquiring location in real time consumes substantial amount of power, so we have to figure out someway to reduce the energy consumption while maintain the functionality.
+	
+	\subsection{Data encryption}
+	
+	Since we have email services, we have to secure the user login information. We will investigate the ways of encryption of user login information and email content for safe email communication as well as secure data storage.
+	
+	\subsection{Bandwidth optimization}
+	
+	% This part remains further considerations.
+	
+	
+
+	
+	
+\end{document}

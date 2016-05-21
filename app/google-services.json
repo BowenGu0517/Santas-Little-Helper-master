@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "416166488602",
+    "firebase_url": "https://santaslittlehelper-1312.firebaseio.com",
+    "project_id": "santaslittlehelper-1312",
+    "storage_bucket": "santaslittlehelper-1312.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416166488602:android:4c1a0783788f75b4",
+        "android_client_info": {
+          "package_name": "me.chayut.santaslittlehelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416166488602-g69varla5rv5jp79sbbgdjv35gce9euh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.chayut.santaslittlehelper",
+            "certificate_hash": "A8D64FC36790B240D24B45407C3B500ED4000410"
+          }
+        },
+        {
+          "client_id": "416166488602-i11cdj60t70aubt5v2a4rtleoeiem3uh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_D75mNfoy8Ks4I7rQ5CjZKHHW85cX_g0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416166488602-i11cdj60t70aubt5v2a4rtleoeiem3uh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
